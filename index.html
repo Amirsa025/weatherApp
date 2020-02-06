@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>نرم افزار آب و هوا</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center bg bg-primary rounded mt-5 p-3 ">
+                        <h1 id="w-location"></h1>
+                        <h3  id="condition" class="text-warning"></h3>
+                        <img src="" alt="" id="w-icon" class="img-fluid">
+                        <h3 id="w-temp"></h3>
+                    
+                        <ul class="list-group mb-5">
+                            <li class="list-group-item " id="w-huminty"></li>
+                            <li class="list-group-item" id="w-visibility"></li>
+                            <li class="list-group-item" id="w-feelslikes"></li>
+                            <li class="list-group-item" id="w-wind"></li>
+                        </ul>
+                        <button class="btn btn-secondary"id="w-change-location" data-toggle="modal" data-target="#ShowModal" >Change Location</button>
+            </div>
+            <div class="modal fade" id="ShowModal" tabindex="-1" role="dialog" aria-labelledby="ShowModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Change location</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                          <div class="form-group">
+                              <label for="city">City</label>
+                              <input type="text" id="city" class="form-control" placeholder="City">
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="save-change">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+
+                <!-- script js  -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/weather.js"></script>
+        <script src="js/storage.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/app.js"></script>
+</body>
+</html>
